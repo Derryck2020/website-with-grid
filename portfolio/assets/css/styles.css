@@ -197,7 +197,6 @@ p {
 Navbar
 ===============
 */
-
 .nav-links {
   display: none; /*so the links will be hidden on a smaller screen*/
 }
@@ -217,6 +216,9 @@ Navbar
   display: grid;
   grid-template-columns: auto 1fr; /*read point one*/
   align-items: center;
+}
+.nav-logo {
+  width: 180px;
 }
 .nav-btn {
   background: transparent;
@@ -345,6 +347,8 @@ Hero
 .hero .underline {
   margin-bottom: 0.5rem;
   margin-left: 0;
+  width: 19vw;
+  max-width: 120px;
 }
 .hero-img {
   display: none;
@@ -357,8 +361,9 @@ Hero
   display: grid;
   place-items: center;
 }
-.hero-info h4 {
+.hero-info h3 {
   color: var(--clr-grey-5);
+  font-family: cursive;
 }
 .hero-icons {
   display: grid;
@@ -492,7 +497,6 @@ Projects
 }
 .project {
   position: relative;
-  background: var(--clr-primary-5);
   border-radius: var(--radius);
   margin-bottom: 2rem;
 }
@@ -520,7 +524,7 @@ Projects
   object-fit: cover;
 }
 .project:hover .project-img {
-  opacity: 0.2;
+  opacity: 0.25;
 }
 .project::after {
   content: "";
@@ -537,6 +541,18 @@ Projects
 .project:hover::after {
   opacity: 1;
   transform: scale(0.8);
+}
+.color-1 {
+    background: hsl(58, 80%, 60%);
+}
+.color-2 {
+    background: hsl(10, 90%, 60%);
+}
+.color-3 {
+    background: hsl(323, 90%, 60%);
+}
+.color-4 {
+    background: hsl(39, 90%, 60%);
 }
 @media screen and (min-width: 678px) {
   .projects-center {
