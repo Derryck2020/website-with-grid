@@ -2,8 +2,8 @@
 KEY NOTES
 
 1. At first, it was 1fr each, but we later change the first column to auto for it to be responsive so that no space left 
-    when the .nav-btn(toggle-btn) is hidden for a bigger screen. At the min-width:756px, the .nav-center can fairly position 
-    the header and the ul.
+      when the .nav-btn(toggle-btn) is hidden for a bigger screen. At the min-width:756px, the .nav-center can fairly position 
+      the header and the ul.
 
 2. We added a div to contain the order elements:button,nav-links,social-icons and also serve as a parent element.
 
@@ -50,10 +50,11 @@ Variables
    --clr-grey-9: hsl(212, 33%, 89%);
    --clr-grey-10: hsl(180, 100%, 90%);
    --clr-white: #fff;
-   --ff-primary: "Roboto", sans-serif;
+   --ff-primary: cursive;
    --ff-secondary: "Open Sans", sans-serif;
+   --ff-tertiary: fantasy;
    --transition: all 0.3s linear;
-   --spacing: 0.25rem;
+   --spacing: 0.15rem;
    --radius: 0.5rem;
    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -191,7 +192,6 @@ p {
 .bg-grey {
    background: var(--clr-primary-10);
 }
-
 /*
 =============== 
 Navbar
@@ -291,7 +291,7 @@ Sidebar
    z-index: 4;
    display: grid;
    /*justify-content: center;
-  align-items: center;*/
+   align-items: center;*/
    place-items: center;
    -webkit-transition: var(--transition);
    transition: var(--transition);
@@ -423,20 +423,20 @@ About
 */
 /* section title added to globals */
 .about-title {
-   text-align: left;
+   text-align: center;
    margin-bottom: 2rem;
 }
-.about-center .underline {
-   margin-left: 0.5rem;
+.underline {
+   text-align: center;
+}
+.about-info a {
+   margin-left: 11rem;
 }
 .about-center {
    display: grid;
    gap: 3rem 2rem;
 }
 .about-img {
-   justify-self: center;
-}
-.aboutpage-img {
    justify-self: center;
 }
 @media screen and (min-width: 992px) {
@@ -446,14 +446,29 @@ About
    .about-img {
       position: relative;
    }
-   .about-img::before {
-      left: -2rem;
-   }
    .about-info {
       align-self: center;
    }
+   .about-page {
+      align-self: center;
+      margin-left: -5rem;
+      text-align: justify;
+   }
+   .about-page .about-title .underline {
+      margin-left: 1.5rem;
+   }
    .hero-photo {
       height: 63vh;
+      box-shadow: var(--dark-shadow);
+   }
+   .about-title {
+      text-align: left;
+   }
+   .about-title .underline {
+      margin-left: 0;
+   }
+   .about-info a {
+      margin-left: 0;
    }
 }
 
@@ -524,7 +539,10 @@ Projects
 .project {
    position: relative;
    border-radius: var(--radius);
-   margin-bottom: 2rem;
+   margin-bottom: 10rem;
+}
+.projects-page {
+   margin: 10rem 5rem;
 }
 .project-info {
    text-align: center;
@@ -905,7 +923,12 @@ Blog
    transform: rotateY(0);
 }
 .card-info {
+   width: 28vw;
+   font-family: monospace;
    padding: 1rem 1.5rem;
+}
+.card-info p {
+   font-family: var(--ff-secondary);
 }
 .card-front img {
    height: 13rem;
