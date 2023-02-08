@@ -78,7 +78,7 @@ body {
    background: var(--clr-white);
    color: var(--clr-grey-1);
    line-height: 1.5;
-   font-size: 0.875rem;
+   font-size: 0.975rem;
 }
 ul {
    list-style-type: none;
@@ -429,8 +429,10 @@ About
 .underline {
    text-align: center;
 }
-.about-info a {
-   margin-left: 11rem;
+.about-info {
+   display: flex;
+   flex-direction: column;
+   place-items: center;
 }
 .about-center {
    display: grid;
@@ -465,7 +467,7 @@ About
       text-align: left;
    }
    .about-title .underline {
-      margin-left: 0;
+      margin-left: 1.5rem;
    }
    .about-info a {
       margin-left: 0;
@@ -988,6 +990,7 @@ Footer
 }
 .footer p {
    font-size: 1.25rem;
+   padding-left: 1.5rem;
    text-transform: capitalize;
 }
 /*
