@@ -36,7 +36,7 @@ Variables
    --clr-primary-7: hsl(182, 90%, 76%);
    --clr-primary-8: hsl(182, 86%, 81%);
    --clr-primary-9: hsl(182, 90%, 88%);
-   --clr-primary-10: hsl(182, 100%, 96%);
+   --clr-primary-10: hsl(183, 100%, 96%);
    /* darkest grey - used for headings */
    --clr-grey-1: hsl(209, 61%, 16%);
    --clr-grey-2: hsl(211, 39%, 23%);
@@ -1014,7 +1014,7 @@ Single Page
 
 /*
 =============== 
-Products Page
+Projects Page
 ===============
 */
 .projects-hero {
@@ -1064,7 +1064,11 @@ Products Page
    padding: 2rem 1.5rem;
 }
 .project-details h4 {
+   font-size: 1.4rem;
    text-align: center;
+}
+.project-details p {
+   font-size: 1rem;
 }
 .project-footer {
    display: grid;
@@ -1085,4 +1089,36 @@ Products Page
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
    gap: 3rem 1rem;
+}
+
+/* Mini Projects */
+.projects-hero-mini {
+   height: 10vh;
+   background: var(--clr-primary-10);
+   display: grid;
+   place-items: center;
+}
+.section-mini {
+   background: var(--clr-primary-1);
+}
+.single-project-mini {
+   width: 90%;
+   margin: 0 auto;
+   background: var(--clr-grey-10);
+   border-radius: var(--radius);
+   transition: var(--transition);
+}
+.single-project-mini:hover {
+   transform: rotate(1deg);
+   box-shadow: 0 3px 5px rgba(235, 254, 255, 0.8);
+}
+.project-container .mini-img {
+   height: 35vh;
+   padding: 1rem;
+   object-fit: cover;
+   border-radius: 1.2rem;
+}
+.project-details-mini {
+   padding: 0.5rem 1rem;
+   text-align: center;
 }
